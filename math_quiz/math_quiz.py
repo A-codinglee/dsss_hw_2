@@ -36,11 +36,9 @@ def math_quiz():
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
-    
     for _ in range(iter):
         # the parameters can be only integer for Random_Int
         n1 = Random_Int(1, 10); n2 = Random_Int(1,6); Op = Random_Op()
-
         PROBLEM, ANSWER = Calculator(n1, n2, Op)
         print(f"\nQuestion: {PROBLEM}")
         # If the users enter non-valid answer, except statement shows up.
@@ -51,13 +49,11 @@ def math_quiz():
                 break  # Exit the loop if input is an integer number.
             except ValueError: # Until the valid input is given, the msg below shows up.
                 print("Invalid input! Please enter an integer number.")
-
         if useranswer == ANSWER:
             print("Correct! You earned a point.")
             score += 1
         else:
             print(f"Wrong answer. The correct answer is {ANSWER}.")
-
     print(f"\nGame over! Your score is: {score}/{iter}")
 
 if __name__ == "__main__":

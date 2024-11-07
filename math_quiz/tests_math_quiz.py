@@ -24,7 +24,8 @@ class TestMathGame(unittest.TestCase):
                 (10, 15, '*', '10 * 15', 150),
                 (-7, 21, '-', '-7 - 21', -28),
                 (0, -10, '+', '0 + -10', -10),
-                (-1, 2, '*', '-1 * 2', -2)
+                (-1, 2, '*', '-1 * 2', -2),
+                (0, 2, '-', '0 - 2', -2),
             ]
 
             for num1, num2, operator, expected_problem, expected_answer in test_cases:
